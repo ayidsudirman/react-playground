@@ -2,9 +2,10 @@ import React, { Component, Fragment } from 'react'
 import CardProduct from '../CardProduct/CardProduct';
 import "./Product.css";
 
-export default class Product extends Component {
+class Product extends Component {
     state = {
-        order: 4
+        order: 1,
+        stock: 5,
     }
 
     handleCounterChange = (newValue) => {
@@ -13,6 +14,14 @@ export default class Product extends Component {
         })
 
     }
+
+    shouldComponentUpdate(nextProps, nextState){
+        if(nextState.order >= this.state.stock){
+            return false;
+        }
+        return true;
+    }
+    
   
       
     render() {
@@ -32,3 +41,5 @@ export default class Product extends Component {
         )
     }
 }
+
+export default Product;
