@@ -26,7 +26,7 @@ class CardProduct extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState){
-        if(nextState.order >= this.state.stock){
+        if(nextState.order > this.state.stock){
             return false;
         }
         return true;
@@ -40,6 +40,7 @@ class CardProduct extends Component {
                        <img src="https://etanee-images.s3-ap-southeast-1.amazonaws.com/4af2c07d-97b1-479f-af4d-c4c2ddb3f3ba" alt="daging-ayam-berbumbu" />
                    </div>
                    <p className="product-title">Daging Ayam Berbumbu Rasa Original plus Tepung Crispy [1 Carton - 10 Pack]</p>
+                   <small>Stock: {this.state.stock}</small>
                    <p className="product-price">Rp. {newPrice.toLocaleString("id-ID")}</p>
                    <div className="counter">
                        <button className="minus" onClick={this.handleMinus}>-</button>

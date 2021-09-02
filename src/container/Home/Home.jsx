@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
+import BlogPost from '../BlogPost/BlogPost';
+// import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
 // import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
-import Product from '../Product/Product';
+// import Product from '../Product/Product';
 
 class Home extends Component {
     state = {
@@ -38,9 +39,9 @@ class Home extends Component {
                     title="Tutorial React JS - bagian 4"
                     desc="1k ditonton. 14 hari yang lalu" />
                 <YouTubeComp /> */}
-                <p>Counter</p>
+                {/* <p>Counter</p>
                 <hr />
-                <Product />
+                <Product /> */}
                 {/* <p>LifeCycle Component</p>
                 <hr />
                 {
@@ -48,6 +49,9 @@ class Home extends Component {
                     <LifeCycleComp /> 
                     : null
                 } */}
+                <p>Blog Post</p>
+                <hr />
+                <BlogPost />
             </div>
         ) 
     }

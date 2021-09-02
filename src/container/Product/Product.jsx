@@ -16,7 +16,7 @@ class Product extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState){
-        if(nextState.order >= this.state.stock){
+        if(nextState.order > this.state.stock){
             return false;
         }
         return true;
