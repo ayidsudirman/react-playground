@@ -5,14 +5,14 @@
     margin-right: 12px;
 }
 
-.img-thumb {
+.img-thumbnail {
     width: 100%;
     height: 118px;
     overflow: hidden;
     position: relative;
 }
 
-.img-thumb img {
+.img-thumbnail img {
     width: 100%;
 }
 

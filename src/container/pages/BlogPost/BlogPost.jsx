@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
-import Post from "../../component/Post/Post";
+import Post from "../../../component/Post/Post";
 import "./BlogPost.css";
 
 class BlogPost extends Component {
@@ -88,6 +88,11 @@ class BlogPost extends Component {
     }
   }
 
+  handleDetail = (id) => {
+    this.props.history.push(`/detail-post/${id}`)
+
+  }
+
   componentDidMount() {
     this.getPostAPI()
 
@@ -96,7 +101,8 @@ class BlogPost extends Component {
   render() {
     return (
       <Fragment>
-        <p>Blog Post</p>
+        <p>Halaman Blog Post</p>
+        <hr />
         <div className="form-add-post">
             <label htmlFor="title">Title</label>
             <input type="text" name="title" placeholder="add title" value={this.state.formBlogPost.title} onChange={this.handleFormChange} />
@@ -105,7 +111,7 @@ class BlogPost extends Component {
             <button className="btn-submit" onClick={this.handleSubmit}>Simpan</button>
         </div>
         {this.state.post.map(post =>{
-            return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} />
+            return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} goDetail={this.handleDetail} />
         })}        
       </Fragment>
     );

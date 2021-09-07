@@ -19,23 +19,18 @@
 
 
 .img-thumb {
-    width: 200px;
-    height: 150px;
+    width: 200px;    
     margin-right: 20px;
+    box-sizing: border-box;
 }
 
-
-.img-thumb img {
-    width: 200px;
-    height: 150px;
+.img-thumb img {        
     object-fit: cover;
 }
 
-
-.content {
-    flex: 1;
+.content {    
+    width: 100%;
 }
-
 
 .content p.title {
     margin: 0px;
@@ -43,8 +38,8 @@
     font-weight: bold;
     color: #3d4a6e;
     margin-bottom: 16px;
+    cursor: pointer;
 }
-
 
 .content p.desc {
     margin: 0px;
@@ -115,3 +110,4 @@ button.btn-submit {
     font-weight: bold;
     margin-top: 30px;
 }
+

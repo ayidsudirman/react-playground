@@ -1,4 +1,5 @@
 import React from "react";
+import "../../container/pages/BlogPost/BlogPost.css";
 
 const Post = (props) => {
   return (
@@ -7,7 +8,7 @@ const Post = (props) => {
         <img src="https://placeimg.com/200/150/tech" alt="" />
       </div>
       <div className="content">
-        <p className="title">{props.data.title}</p>
+        <p className="title" onClick={() => props.goDetail(props.data.id)}>{props.data.title}</p>
         <p className="desc">{props.data.body}</p>
         <button className="update" onClick={() => props.update(props.data)}>Update</button>
         <button className="remove" onClick={() => props.remove(props.data.id)}>Remove</button>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import productImgDagingAyam from "../../../../assets/productImgDagingAyam.jpeg";
 
 class CardProduct extends Component {
     state = {
@@ -37,7 +38,7 @@ class CardProduct extends Component {
         return (                        
                <div className="card">
                    <div className="img-thumb-prod">
-                       <img src="https://etanee-images.s3-ap-southeast-1.amazonaws.com/4af2c07d-97b1-479f-af4d-c4c2ddb3f3ba" alt="daging-ayam-berbumbu" />
+                       <img src={productImgDagingAyam} alt="daging-ayam-berbumbu" />
                    </div>
                    <p className="product-title">Daging Ayam Berbumbu Rasa Original plus Tepung Crispy [1 Carton - 10 Pack]</p>
                    <small>Stock: {this.state.stock}</small>

@@ -4,7 +4,7 @@ import './YouTubeComp.css';
 const YouTubeComp = (props) => {
     return (
         <div className="youtube-wrapper">
-            <div className="img-thumb">
+            <div className="img-thumbnail">
                 <img src="https://i.ytimg.com/vi/GBvnzRwoizo/mqdefault.jpg" alt="" />
                 <p className="time">{props.time}</p>
             </div>
