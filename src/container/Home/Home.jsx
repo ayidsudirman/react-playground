@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //pages
 import BlogPost from "../pages/BlogPost/BlogPost";
+import Hooks from "../pages/Hooks/Hooks";
 import DetailPost from "../pages/BlogPost/DetailPost/DetailPost";
 import LifeCycleComp from "../pages/LifeCycleComp/LifeCycleComp";
 import Product from "../pages/Product/Product";
@@ -27,12 +28,14 @@ class Home extends Component {
                 <Link to="/product">Product</Link>
                 <Link to="/lifecycle">Lifecycle</Link>
                 <Link to="/youtube-comp">Youtube</Link>
+                <Link to="/hooks">Hooks</Link>
             </div>
             <Route path="/" exact component={BlogPost}/>
             <Route path="/detail-post/:postID" exact component={DetailPost}/>
             <Route path="/product" component={Product}/>
             <Route path="/lifecycle" component={LifeCycleComp}/>
             <Route path="/youtube-comp" component={YouTubeCompPage}/>
+            <Route path="/hooks" component={Hooks}/>
         </Fragment>
       </Router>
     );
