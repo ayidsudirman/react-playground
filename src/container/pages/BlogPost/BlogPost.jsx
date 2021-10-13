@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+// import { v4 as uuidv4 } from "uuid";
 import Post from "../../../component/Post/Post";
 import "./BlogPost.css";
 import API from "../../../services";
@@ -7,10 +8,10 @@ class BlogPost extends Component {
   state = {
     post: [],
     formBlogPost: {
+      userId: 1,
       id: 1,
       title: "",
       body: "",
-      userId: 1,
     },
     isUpdate: false,
     comments: []
@@ -74,6 +75,7 @@ class BlogPost extends Component {
   handleFormChange = (event) => {
     let formBlogPostNew = { ...this.state.formBlogPost };
     let timeStamp = new Date().getTime();
+    // let newId = uuidv4();    
 
     if (!this.state.isUpdate) {
       formBlogPostNew["id"] = timeStamp;

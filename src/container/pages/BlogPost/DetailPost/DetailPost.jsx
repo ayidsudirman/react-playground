@@ -10,8 +10,8 @@ class DetailPost extends Component {
         }
         
     }
-    
-    render() {
+
+    componentDidMount() {
         // console.log(this.props)
         // console.log(this.props.match.params.postID)
         let id = this.props.match.params.postID;
@@ -23,9 +23,11 @@ class DetailPost extends Component {
                     title: post.title,
                     body: post.body
                 }
-            })
-
+            })    
         })
+    }
+      
+    render() {                
         return (
             <div className="detail-post">
                 <p className="detail-title">{this.state.post.title}</p>
