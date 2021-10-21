@@ -9,6 +9,7 @@ import DetailPost from "../pages/BlogPost/DetailPost/DetailPost";
 import LifeCycleComp from "../pages/LifeCycleComp/LifeCycleComp";
 import Product from "../pages/Product/Product";
 import YouTubeCompPage from "../pages/YouTubeCompPage/YouTubeCompPage";
+import App from "../pages/Progate/Modal/App";
 
 //styles
 import './Home.css';
@@ -29,6 +30,7 @@ class Home extends Component {
                 <Link to="/lifecycle">Lifecycle</Link>
                 <Link to="/youtube-comp">Youtube</Link>
                 <Link to="/hooks">Hooks</Link>
+                <Link to="/progate-modal">Modal</Link>
             </div>
             <Route path="/" exact component={BlogPost}/>
             <Route path="/detail-post/:postID" exact component={DetailPost}/>
@@ -36,6 +38,7 @@ class Home extends Component {
             <Route path="/lifecycle" component={LifeCycleComp}/>
             <Route path="/youtube-comp" component={YouTubeCompPage}/>
             <Route path="/hooks" component={Hooks}/>
+            <Route path="/progate-modal" component={App}/>
         </Fragment>
       </Router>
     );
