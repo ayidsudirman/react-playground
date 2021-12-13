@@ -10,6 +10,11 @@ import LifeCycleComp from "../pages/LifeCycleComp/LifeCycleComp";
 import Product from "../pages/Product/Product";
 import YouTubeCompPage from "../pages/YouTubeCompPage/YouTubeCompPage";
 import App from "../pages/Progate/Modal/App";
+import Sastra from "../../component/Hooks/Sastra";
+import ComponentState from "../../component/Hooks/ComponentState";
+import SideEffect from "../../component/Hooks/SideEffect";
+import StateManagement from "../../component/Hooks/StateManagement";
+import PerformanceOptimization from "../../component/Hooks/PerformanceOptimization";
 
 //styles
 import './Home.css';
@@ -39,6 +44,12 @@ class Home extends Component {
             <Route path="/youtube-comp" component={YouTubeCompPage}/>
             <Route path="/hooks" component={Hooks}/>
             <Route path="/progate-modal" component={App}/>
+            {/* Hooks */}
+            <Route path="/sastra" exact component={Sastra}/>
+            <Route path="/sastra/component-state" component={ComponentState}/>
+            <Route path="/side-effect" component={SideEffect}/>
+            <Route path="/sastra/state-management" component={StateManagement}/>
+            <Route path="/sastra/performance-optimization" component={PerformanceOptimization}/>
         </Fragment>
       </Router>
     );
