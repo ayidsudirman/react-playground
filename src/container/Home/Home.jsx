@@ -47,7 +47,7 @@ class Home extends Component {
             {/* Hooks */}
             <Route path="/sastra" exact component={Sastra}/>
             <Route path="/sastra/component-state" component={ComponentState}/>
-            <Route path="/side-effect" component={SideEffect}/>
+            <Route path="/sastra/side-effect" component={SideEffect}/>
             <Route path="/sastra/state-management" component={StateManagement}/>
             <Route path="/sastra/performance-optimization" component={PerformanceOptimization}/>
         </Fragment>

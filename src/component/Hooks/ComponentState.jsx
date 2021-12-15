@@ -5,7 +5,7 @@ const ComponentState = () => {
     const [state, setState] = useState({
         subscribe: false,
         // like: 0,
-        dislike: 0
+        // dislike: 0
     });
 
     const handleSubscribe = () => {
